@@ -7,4 +7,12 @@
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
+
+<%= form_for @self_reflection do |f| %>
+    <%= f.text_field :personality %>
+    <%= f.text_field :work %>
+    <%= f.text_field :morning_todo %>
+    <%= f.submit "Update" %>
+  <% end %>
+
 </p>

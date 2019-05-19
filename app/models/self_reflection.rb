@@ -1,0 +1,2 @@
+class SelfReflection < ApplicationRecord
+end

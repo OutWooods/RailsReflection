@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_19_161736) do
+ActiveRecord::Schema.define(version: 2019_05_19_191219) do
+
+  create_table "learnings", force: :cascade do |t|
+    t.text "question"
+    t.text "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "self_reflections", force: :cascade do |t|
+    t.text "personality"
+    t.text "personality_reflection"
+    t.text "work"
+    t.text "work_reflection"
+    t.text "morning_todo"
+    t.text "evening"
+    t.text "evening_reflection"
+    t.text "evening_todo"
+    t.text "dump"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
